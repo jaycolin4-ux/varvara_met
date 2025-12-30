@@ -225,14 +225,27 @@
         updateTimer();
 
         // --- МУЗЫКА ---
-        document.body.addEventListener('click', function() {
-            const audio = document.getElementById('bg-music');
-            if(audio) {
-                audio.volume = 0.3;
-                audio.play();
-            }
-        }, { once: true });
+       // --- МУЗЫКА (Улучшенный вариант) ---
+const startAudio = () => {
+    const audio = document.getElementById('bg-music');
+    if (audio) {
+        audio.volume = 0.3;
+        audio.play()
+            .then(() => {
+                console.log("Audio started successfully");
+            })
+            .catch(error => {
+                console.error("Audio playback failed:", error);
+                // Это может случиться, если файл не найден по указанному пути
+            });
+    }
+};
+
+// Слушаем и клик, и нажатие клавиш для надежности
+document.addEventListener('click', startAudio, { once: true });
+document.addEventListener('keydown', startAudio, { once: true });
     </script>
 </body>
 
 </html>
+
