@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    background: #0a0a0e; /* Глубокий ночной цвет */
+    color: #e0d5c0;
+    font-family: 'Lora', serif;
+    overflow: hidden;
+}
+
+.magic-text {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    animation: pulse 4s infinite alternate;
+}
+
+.content-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    filter: sepia(0.3) drop-shadow(0 0 5px gold);
+    border-radius: 10px;
+}
+
+/* Скрытая страница */
+#surprise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #1a1a2e 0%, #000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease;
+}
+
+#surprise-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@keyframes pulse {
+    from { opacity: 0.7; }
+    to { opacity: 1; text-shadow: 0 0 20px gold; }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Новым Годом! ✦</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* БАЗОВЫЕ НАСТРОЙКИ СТРАНИЦЫ */
+        body.gift-page {
+            background: radial-gradient(circle, #0f2a30 0%, #050c0e 100%);
+            margin: 0;
+            padding: 0;
+            color: #fef4af;
+            font-family: 'EB Garamond', serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* КОНТЕЙНЕР (ЦЕНТРОВКА) */
+        .gift-container {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 60px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* ШАПКА */
+        .gift-header {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: clamp(2rem, 8vw, 3.5rem); /* Адаптивный размер шрифта */
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            margin: 0 0 20px 0;
+        }
+
+        /* ТАЙМЕР */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: clamp(10px, 4vw, 30px);
+            margin: 20px 0;
+            font-family: 'Cinzel', serif;
+        }
+        .timer-item { color: var(--gold); min-width: 60px; }
+        .timer-item span { display: block; font-size: clamp(1.5rem, 5vw, 2.5rem); text-shadow: 0 0 10px var(--gold); }
+        .timer-item small { font-size: 0.7rem; text-transform: uppercase; opacity: 0.7; }
+
+        .hero-line {
+            width: 100px;
+            height: 1px;
+            background: var(--gold);
+            margin: 20px 0 40px;
+            box-shadow: 0 0 10px var(--gold);
+        }
+
+        /* ФОТОГРАФИИ (АДАПТИВНАЯ СЕТКА) */
+        .photo-moments {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .photo-card {
+            background: white;
+            padding: 12px 12px 40px 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        .photo-card:nth-child(1) { transform: rotate(-3deg); }
+        .photo-card:nth-child(2) { transform: rotate(2deg); }
+        .photo-card:nth-child(3) { transform: rotate(-1deg); }
+
+        .photo-card:hover {
+            transform: rotate(0deg) scale(1.05);
+            z-index: 20;
+        }
+
+        .photo-card img {
+            width: 100%;
+            aspect-ratio: 4/5; /* Все фото одной пропорции */
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+
+        /* ПОЗДРАВЛЕНИЕ */
+        .personal-wish {
+            font-size: clamp(1.1rem, 4vw, 1.4rem);
+            line-height: 1.6;
+            background: rgba(11, 30, 34, 0.7);
+            padding: 30px;
+            border: 1px solid var(--gold);
+            backdrop-filter: blur(5px);
+            margin-bottom: 40px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* КНОПКА (ФИКС НАЛОЖЕНИЯ) */
+        .fancy-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            transition: 0.4s;
+            background: transparent;
+            margin-top: 20px;
+        }
+        .fancy-btn:hover {
+            background: var(--gold);
+            color: #050c0e;
+            box-shadow: 0 0 20px var(--gold);
+        }
+
+        /* ХОЛСТ СНЕГА (ФОН) */
+        #snow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; 
+            z-index: 1;
+        }
+
+        @media (max-width: 600px) {
+            .gift-container { padding: 40px 15px; }
+            .photo-moments { grid-template-columns: 1fr; }
+            .personal-wish { padding: 20px; }
+        }
+    </style>
+</head>
+<body class="gift-page">
+
+    <canvas id="snow"></canvas>
+    <audio id="bg-music" loop><source src="magic.mp3" type="audio/mpeg"></audio>
+
+    <div class="gift-container">
+        <h1 class="gift-header">С Новым Годом!</h1>
+        
+        <div class="countdown-container">
+            <div class="timer-item"><span id="days">00</span><small>дней</small></div>
+            <div class="timer-item"><span id="hours">00</span><small>часов</small></div>
+            <div class="timer-item"><span id="minutes">00</span><small>минут</small></div>
+        </div>
+
+        <div class="hero-line"></div>
+        
+        <div class="photo-moments">
+            <div class="photo-card"><img src="image/photo_2025-03-24_09-06-19.jpg" alt="Memory 1"></div>
+            <div class="photo-card"><img src="image/photo_2025-08-25_00-02-49.jpg" alt="Memory 2"></div>
+            <div class="photo-card"><img src="image/photo_2025-04-08_23-16-02.jpg" alt="Memory 3"></div>
+        </div>
+
+        <div class="personal-wish">
+            <p>Дорогой мой человек! Пусть этот год будет таким же вдохновляющим, как самые глубокие миры фэнтези. Спасибо, что ты рядом в моем путешествии. Пусть в 2026-м магия случается не только в книгах, но и в каждом твоем дне!</p>
+            <p style="margin-top: 20px; font-family: 'Cinzel'; color: var(--gold);">Твои Манижа и Арсений (ну и Киря)</p>
+        </div>
+
+        <a href="index.html" class="fancy-btn">Вернуться в реальность</a>
+    </div>
+
+    <script>
+        
+        const canvas = document.getElementById('snow');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        function init() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            for(let i=0; i<80; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    r: Math.random() * 2 + 1,
+                    d: Math.random() * 0.5
+                });
+            }
+        }
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "rgba(212, 175, 55, 0.5)";
+            ctx.beginPath();
+            for(let p of particles) {
+                ctx.moveTo(p.x, p.y);
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, true);
+            }
+            ctx.fill();
+            update();
+        }
+        function update() {
+            for(let p of particles) {
+                p.y += Math.cos(p.d) + 1 + p.r/2;
+                if(p.y > canvas.height) p.y = -10;
+            }
+        }
+        window.addEventListener('resize', init);
+        init();
+        setInterval(draw, 33);
+
+        // --- ТАЙМЕР ---
+        function updateTimer() {
+            const targetDate = new Date("January 1, 2026 00:00:00").getTime();
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+            if (diff > 0) {
+                document.getElementById('days').innerText = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+                document.getElementById('hours').innerText = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                document.getElementById('minutes').innerText = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+            }
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        // --- МУЗЫКА ---
+        document.body.addEventListener('click', function() {
+            const audio = document.getElementById('bg-music');
+            if(audio) {
+                audio.volume = 0.3;
+                audio.play();
+            }
+        }, { once: true });
+    </script>
+</body>
+</html>

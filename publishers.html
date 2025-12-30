@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Varvara Met</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="pub-page">
+ <header class="main-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">VM</a>
+
+        <nav class="nav-menu">
+            <a href="index.html">ГЛАВНАЯ</a>
+            <a href="publishers.html">ИЗДАТЕЛЬСТВАМ</a>
+            <a href="index.html#about">ОБО МНЕ</a>
+            <a href="#collab">КОНТАКТЫ</a>
+        </nav>
+
+        <div class="lang-selector">
+            <button class="lang-item active">RU</button>
+            <span class="sep">/</span>
+            <button class="lang-item">EN</button>
+        </div>
+    </div>
+</header>
+
+    <header class="minimal-hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-decor">✦ ⚜ ✦</div>
+            <h1>PORTFOLIO</h1>
+            <p class="hero-sub">Метелкина Варвара — Writer & Concept Artist</p>
+            <div class="hero-line"></div>
+        </div>
+    </header>
+
+    <main class="content-wrapper">
+        <section class="stats-row">
+            <div class="stat-item">
+                <span class="stat-num">5K+</span>
+                <span class="stat-desc">Охват аудитории</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">12 А.Л.</span>
+                <span class="stat-desc">Объем рукописи</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">YA</span>
+                <span class="stat-desc">Жанровое ядро</span>
+            </div>
+        </section>
+
+        <section id="projects" class="project-showcase">
+            <div class="project-container">
+                <div class="project-image">
+                    <div class="img-frame">
+                        <img src="image93.png" alt="Сердце леса">
+                    </div>
+                </div>
+                <div class="project-details">
+                    <span class="project-label">Current Project</span>
+                    <h2>Сердце леса</h2>
+                    <div class="project-tags">#DarkFantasy #MagicRealism #Slavic</div>
+                    <p class="project-text">
+                        Уникальное сочетание славянского хоррора и Young Adult.
+                        История о поиске себя в мире, где лес — это не просто деревья, а живое и опасное божество.
+                    </p>
+                    <div class="project-actions">
+                        <a href="#" class="btn-primary">Синопсис</a>
+                        <a href="#" class="btn-secondary">Главы</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="visual-concept">
+            <div class="section-header">
+                <h2 class="title-with-line">Visual Concept</h2>
+            </div>
+            <div class="visual-grid">
+                <div class="visual-text-side">
+                    <p>Я создаю не просто текст, а визуальную вселенную. Полная разработка персонажей, карт и
+                        атмосферных иллюстраций для каждого проекта.</p>
+                    <div class="visual-features">
+                        <span>✦ Концепт-арты</span>
+                        <span>✦ Карты миров</span>
+                        <span>✦ Дизайн персонажей</span>
+                    </div>
+                </div>
+                <div class="visual-gallery">
+                    <div class="gallery-item main-art">
+                        <img src="image 94.png" alt="Main Concept">
+                    </div>
+                    <div class="gallery-sub">
+                        <div class="gallery-item sub-art">
+                            <img src="image93.png" alt="Sub Concept 1">
+                        </div>
+                        <div class="gallery-item sub-art">
+                            <div class="art-placeholder">✦</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section id="collab" class="collab-form">
+        <div class="collab-container">
+            <div class="collab-header">
+                <span class="form-star">✦</span>
+                <h2>СТАТЬ ЧАСТЬЮ МИРА</h2>
+                <p>форма для связи с издательствами и партнерами</p>
+            </div>
+
+            <form action="https://formspree.io/f/xpqabdol" method="POST" class="partnership-form">
+                <div class="input-row">
+                    <input type="text" name="name" placeholder="ВАШЕ ИМЯ / НАЗВАНИЕ КОМПАНИИ" required>
+                    <input type="email" name="email" placeholder="E-MAIL ДЛЯ СВЯЗИ" required>
+                </div>
+
+                <div class="input-row">
+                    <select name="type" required>
+                        <option value="" disabled selected>ТИП ПРОЕКТА</option>
+                        <option value="book">Издание книги</option>
+                        <option value="illustration">Иллюстрирование</option>
+                        <option value="audio">Аудио-проект</option>
+                    </select>
+                    <input type="text" name="link" placeholder="ССЫЛКА НА САЙТ / ПОРТФОЛИО">
+                </div>
+
+                <textarea name="message" placeholder="РАССКАЖИТЕ О ВАШЕЙ ИДЕЕ..." rows="5"></textarea>
+
+                <div class="form-bottom">
+                    <label class="file-label">
+                        <input type="file" name="attachment">
+                        <span><i class="fa-solid fa-paperclip"></i> ПРИКРЕПИТЬ ТЗ</span>
+                    </label>
+                    <button type="submit" class="send-btn">ОТПРАВИТЬ ПРЕДЛОЖЕНИЕ</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="pub-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <span class="footer-logo">VM</span>
+                <p>© 2025 VARVARA MET</p>
+            </div>
+
+            <div class="footer-decor">✦ ⚜ ✦</div>
+
+            <div class="footer-right">
+                <div class="footer-socials">
+                    <a href="https://t.me/buvonsduthe" class="social-link"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-vk"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
