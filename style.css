@@ -125,24 +125,22 @@ body, a, button, input, textarea {
     text-shadow: 0 0 10px #d4af37, 0 0 20px #b8860b;
     opacity: 0;
     user-select: none;
-}/* --- ГЛАВНЫЙ ЭКРАН HERO --- */.hero {
+}/* --- ГЛАВНЫЙ ЭКРАН HERO --- *//* --- ГЛАВНЫЙ ЭКРАН HERO (ЗЕЛЕНЫЙ ФОН И МАТОВЫЙ ТЕКСТ) --- */
+.hero {
     position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Глубокий зеленый цвет (ты можешь заменить #122620 на свой вариант) */
-    background: #122620; 
+    background: #122620; /* Тот самый глубокий зеленый */
     overflow: hidden;
 }
 
-/* Скрываем карту и туман, чтобы они не перекрывали зеленый цвет */
+/* Скрываем всё лишнее, чтобы фон был чистым */
 .map-layer, #fogCanvas, .fog-container, .hero-overlay {
     display: none !important;
 }
-
-
 
 .hero-content h1 {
     font-family: 'Cinzel', serif;
@@ -150,20 +148,18 @@ body, a, button, input, textarea {
     color: #fff9e6;
     letter-spacing: 15px;
     margin: 0;
-   
+    
+    /* УДАЛЕНО: Свечение и анимация пульсации */
+    text-shadow: none !important; 
+    animation: none !important;
 }
-/*
-@keyframes goldPulse {
-    0%, 100% { text-shadow: 0 0 15px rgba(212, 175, 55, 0.8), 0 0 30px rgba(212, 175, 55, 0.4); }
-    50% { text-shadow: 0 0 25px rgba(255, 215, 0, 1), 0 0 50px rgba(255, 215, 0, 0.6); }
-}
-*/
+
 .hero-line {
     width: 150px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    background: #d4af37; /* Чистое золото */
     margin: 20px auto;
-    box-shadow: 0 0 10px #d4af37;
+    box-shadow: none; /* Убрано свечение линии */
 }
 
 .hero-content p {
@@ -171,26 +167,12 @@ body, a, button, input, textarea {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 1.1rem;
- 
+    
+    /* УДАЛЕНО: Свечение у маленького текста */
+    text-shadow: none !important; 
 }
 
-#fogCanvas {
-    position: absolute;
-    inset: 0;
-    z-index: 5;
-    pointer-events: none;
-    filter: blur(40px);
-    opacity: 0.9;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle, transparent 40%, rgba(11, 30, 34, 0.6) 100%);
-    z-index: 6;
-}
-
-/* --- ИСПРАВЛЕННЫЙ БЛОК УГЛОВ (ГДЕ БЫЛА ОШИБКА) --- */
+/* --- ИСПРАВЛЕННЫЙ БЛОК УГЛОВ (РАЗНЕСЕНЫ ПО КРАЯМ) --- */
 .hero-corners {
     position: absolute;
     top: 40px;
@@ -208,17 +190,49 @@ body, a, button, input, textarea {
     border: 2px solid #d4af37;
 }
 
+/* Прижимаем к краям контейнера .hero-corners */
 .left-top { top: 0; left: 0; border-right: none; border-bottom: none; }
 .right-top { top: 0; right: 0; border-left: none; border-bottom: none; }
 .left-bottom { bottom: 0; left: 0; border-right: none; border-top: none; }
 .right-bottom { bottom: 0; right: 0; border-left: none; border-top: none; }
-/* --- КОНЕЦ ИСПРАВЛЕНИЯ --- */
 
 .hero-container {
     position: relative;
     z-index: 30;
     text-align: center;
 }
+#fogCanvas {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    filter: blur(40px);
+    opacity: 0.9;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, transparent 40%, rgba(11, 30, 34, 0.6) 100%);
+    z-index: 6;
+}
+
+/* --- ИСПРАВЛЕННЫЙ БЛОК УГЛОВ (ГДЕ БЫЛА ОШИБКА) --- */
+
+
+.corner {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #d4af37;
+}
+
+.left-top { top: 0; left: 0; border-right: none; border-bottom: none; }
+.right-top { top: 0; right: 0; border-left: none; border-bottom: none; }
+.left-bottom { bottom: 0; left: 0; border-right: none; border-top: none; }
+.right-bottom { bottom: 0; right: 0; border-left: none; border-top: none; }
+/* --- КОНЕЦ ИСПРАВЛЕНИЯ --- */
+
 
 
 /* --- СОЦСЕТИ --- */
@@ -1414,5 +1428,6 @@ body {
 .fly:nth-child(3) { left: 60%; bottom: 5%; animation: fly-logic 6s infinite linear; animation-delay: 2s; }
 .fly:nth-child(4) { left: 80%; bottom: 15%; animation: fly-logic 10s infinite linear; animation-delay: 0.5s; }
 .fly:nth-child(5) { left: 30%; bottom: 5%; animation: fly-logic 8s infinite linear; animation-delay: 3s; }
+
 
 
