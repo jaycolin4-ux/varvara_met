@@ -273,20 +273,9 @@ body, a, button, input, textarea {
 
 
 
-/* Рамки и контент */
-.hero-corners {
-    position: absolute;
-    inset: 50px;
-    z-index: 20;
-    pointer-events: none;
-}
 
-.corner {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border: 2px solid var(--gold);
-}
+
+
 #fogCanvas {
     position: absolute;
     top: 0;
@@ -307,10 +296,47 @@ body, a, button, input, textarea {
     background: radial-gradient(circle, transparent 40%, rgba(11, 30, 34, 0.6) 100%);
     z-index: 6;
 }
-.left-top { top: 30px; left: 0; border-right: none; border-bottom: none; }
-.right-top { top: 30px; right: 0; border-left: none; border-bottom: none; }
-.left-bottom { bottom: 0; left: 0; border-right: none; border-top: none; }
-.right-bottom { bottom: 0; right: 0; border-left: none; border-top: none; }
+/* Контейнер для углов */
+.hero-corners {
+    position: absolute;
+    inset: 40px; /* Отступ от краев экрана */
+    z-index: 20;
+    pointer-events: none;
+}
+
+/* Общие стили для каждого угла */
+.corner {
+    position: absolute;
+    width: 60px;  /* Длина линии */
+    height: 60px; /* Длина линии */
+    border: 2px solid #d4af37; /* Твой золотой цвет */
+}
+
+/* Настройка каждого угла отдельно */
+.left-top { 
+    top: 0; 
+    left: 0; 
+    border-right: none; 
+    border-bottom: none; 
+}
+.right-top { 
+    top: 0; 
+    right: 0; 
+    border-left: none; 
+    border-bottom: none; 
+}
+.left-bottom { 
+    bottom: 0; 
+    left: 0; 
+    border-right: none; 
+    border-top: none; 
+}
+.right-bottom { 
+    bottom: 0; 
+    right: 0; 
+    border-left: none; 
+    border-top: none; 
+}
 
 .hero-container {
     position: relative;
@@ -1510,4 +1536,5 @@ body {
 .fly:nth-child(3) { left: 60%; bottom: 5%; animation: fly-logic 6s infinite linear; animation-delay: 2s; }
 .fly:nth-child(4) { left: 80%; bottom: 15%; animation: fly-logic 10s infinite linear; animation-delay: 0.5s; }
 .fly:nth-child(5) { left: 30%; bottom: 5%; animation: fly-logic 8s infinite linear; animation-delay: 3s; }
+
 
