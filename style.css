@@ -149,9 +149,8 @@ body, a, button, input, textarea {
     letter-spacing: 15px;
     margin: 0;
     
-    /* УДАЛЕНО: Свечение и анимация пульсации */
-    text-shadow: none !important; 
-    animation: none !important;
+    
+
 }
 
 .hero-line {
@@ -688,7 +687,7 @@ body, a, button, input, textarea {
 }
 
 .hero-content { position: relative; z-index: 2; }
-.hero-content h1 { font-family: 'Cinzel', serif; font-size: clamp(3rem, 8vw, 6rem); letter-spacing: 15px; margin: 20px 0; }
+
 .hero-line { width: 60px; height: 2px; background: var(--gold); margin: 20px auto; }
 
 /* Статистика */
@@ -1428,6 +1427,7 @@ body {
 .fly:nth-child(3) { left: 60%; bottom: 5%; animation: fly-logic 6s infinite linear; animation-delay: 2s; }
 .fly:nth-child(4) { left: 80%; bottom: 15%; animation: fly-logic 10s infinite linear; animation-delay: 0.5s; }
 .fly:nth-child(5) { left: 30%; bottom: 5%; animation: fly-logic 8s infinite linear; animation-delay: 3s; }
+
 
 
 
