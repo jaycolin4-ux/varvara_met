@@ -184,12 +184,12 @@ body, a, button, input, textarea {
         0 5px 10px rgba(0, 0, 0, 0.5);
     animation: goldPulse 4s ease-in-out infinite;
 }
-
+/*
 @keyframes goldPulse {
     0%, 100% { text-shadow: 0 0 15px rgba(212, 175, 55, 0.8), 0 0 30px rgba(212, 175, 55, 0.4); }
     50% { text-shadow: 0 0 25px rgba(255, 215, 0, 1), 0 0 50px rgba(255, 215, 0, 0.6); }
 }
-
+*/
 .hero-line {
     width: 150px;
     height: 2px;
@@ -1339,6 +1339,7 @@ body {
 .fly:nth-child(3) { left: 60%; bottom: 5%; animation: fly-logic 6s infinite linear; animation-delay: 2s; }
 .fly:nth-child(4) { left: 80%; bottom: 15%; animation: fly-logic 10s infinite linear; animation-delay: 0.5s; }
 .fly:nth-child(5) { left: 30%; bottom: 5%; animation: fly-logic 8s infinite linear; animation-delay: 3s; }
+
 
 
 
