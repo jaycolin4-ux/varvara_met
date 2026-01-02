@@ -100,3 +100,27 @@ function googleTranslateElementInit() {
             selectField.dispatchEvent(new Event('change'));
         }
     }
+    function initMagicCursor() {
+    const cursor = document.getElementById('magic-cursor');
+    if (!cursor) return;
+
+    // Движение курсора
+    window.addEventListener('mousemove', (e) => {
+        requestAnimationFrame(() => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    });
+
+    // Эффект при наведении на кнопки и ссылки
+    const hovers = document.querySelectorAll('a, button, select, input, textarea');
+    hovers.forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('link-hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('link-hover'));
+    });
+}
+
+// Запуск при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    initMagicCursor();
+});
