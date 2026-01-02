@@ -6,43 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Varvara Met Portfolio</title>
     <link rel="stylesheet" href="style.css">
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div id="magic-cursor"></div>
 
-    <header class="hero">
-        <div class="hero-top-wrapper">
-            <div class="corner left-top"></div>
-            <header class="main-header">
-                <div class="nav-container">
-                    <a href="index.html" class="logo">VM</a>
-
-                    <nav class="nav-menu">
-                        <a href="index.html">ГЛАВНАЯ</a>
-                        <a href="publishers.html">ИЗДАТЕЛЬСТВАМ</a>
-                        <a href="index.html#about">ОБО МНЕ</a>
-
-                    </nav>
-
-                    <div class="lang-selector">
-                        <button class="lang-item active">RU</button>
-                        <span class="sep">/</span>
-                        <button class="lang-item">EN</button>
-                    </div>
-                </div>
-            </header>
-            <header>
-                <div class="corner right-top"></div>
+   <header class="main-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">VM</a>
+        <nav class="nav-menu">
+            <a href="index.html">ГЛАВНАЯ</a>
+            <a href="publishers.html">ИЗДАТЕЛЬСТВАМ</a>
+            <a href="index.html#about">ОБО МНЕ</a>
+        </nav>
+        <div class="lang-selector">
+            <button class="lang-item active">RU</button>
+            <span class="sep">/</span>
+            <button class="lang-item">EN</button>
+        </div>
+    </div>
+</header>
+<header class="main-header">
+    <div class="nav-container">
+        <a href="index.html" class="logo">VM</a>
+        <nav class="nav-menu">
+            <a href="index.html">ГЛАВНАЯ</a>
+            <a href="publishers.html">ИЗДАТЕЛЬСТВАМ</a>
+            <a href="index.html#about">ОБО МНЕ</a>
+        </nav>
+        <div class="lang-selector">
+            <button class="lang-item active">RU</button>
+            <span class="sep">/</span>
+            <button class="lang-item">EN</button>
+        </div>
+    </div>
+</header>
+<section class="hero">
+    <div class="hero-bg-wrapper">
+        <div class="paper-texture"></div>
+        
+        <div class="map-vector">
+            <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50,150 Q100,100 150,150 T250,150 T350,100 T450,200 T550,150 T650,250 T750,150" fill="none" stroke="#4a3b2a" stroke-width="1" opacity="0.4"/>
+                <path d="M100,250 Q150,300 200,250 T300,300 T400,200 T500,350 T600,250 T700,300" fill="none" stroke="#4a3b2a" stroke-width="1" opacity="0.3"/>
+                <circle cx="700" cy="100" r="40" fill="none" stroke="#4a3b2a" stroke-width="0.5" opacity="0.5"/>
+            </svg>
         </div>
 
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1>VARVARA MET</h1>
-                <p>Добро пожаловать в мастерскую спящих миров</p>
-            </div>
+        <canvas id="fogCanvas"></canvas>
+        
+        <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-corners">
+        <div class="corner left-top"></div>
+        <div class="corner right-top"></div>
+        <div class="corner left-bottom"></div>
+        <div class="corner right-bottom"></div>
+    </div>
+
+    <div class="container hero-container">
+        <div class="hero-content">
+            <h1>VARVARA MET</h1>
+            <div class="hero-line"></div>
+            <p>МАСТЕРСКАЯ СПЯЩИХ МИРОВ</p>
         </div>
-    </header>
+    </div>
+</section>
     <section id="about" class="about">
         <div class="container">
             <div class="about-wrapper">
@@ -93,127 +126,152 @@
                 <div class="work-card">
                     <div class="card-frame">
                         <span class="card-star">✦</span>
+                        <img src="image/foolow.png" alt="Подожди меня ещё немного" class="book-cover">
                     </div>
-                    <div class="card-info">
-                        <div class="progress-section">
-                            <div class="progress-info">
-                                <span class="progress-label">Рукопись «Сердце леса»</span>
-                                <span class="progress-percentage">75%</span>
-                            </div>
-                            <div class="progress-track">
-                                <div class="progress-fill" style="width: 75%;">
-                                    <div class="progress-glow"></div>
-                                </div>
-                            </div>
-                            <p class="progress-status">✦ Идет работа над финальными главами ✦</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="work-card">
-                    <div class="card-frame"><span class="card-star">✦</span></div>
+
                     <div class="progress-section">
                         <div class="progress-info">
-                            <span class="progress-label">Рукопись «Сердце леса»</span>
-                            <span class="progress-percentage">75%</span>
+                            <span class="progress-label" title="Рукопись «Подожди меня ещё немного»">Рукопись «Подожди меня ещё немного»</span>
+                            <span class="progress-percentage">100%</span>
                         </div>
                         <div class="progress-track">
-                            <div class="progress-fill" style="width: 75%;">
+                            <div class="progress-fill" style="width: 100%;">
                                 <div class="progress-glow"></div>
                             </div>
                         </div>
-                        <p class="progress-status">✦ Идет работа над финальными главами ✦</p>
+                        <p class="progress-status">✦ Ждет своего издателя ✦</p>
                     </div>
                 </div>
                 <div class="work-card">
-                    <div class="card-frame"><span class="card-star">✦</span></div>
+                    <div class="card-frame">
+                        <span class="card-star">✦</span>
+                        <img src="image/emerald-book.jpg" alt="Изумрудник" class="book-cover">
+                    </div>
+
                     <div class="progress-section">
                         <div class="progress-info">
-                            <span class="progress-label">Рукопись «Сердце леса»</span>
-                            <span class="progress-percentage">75%</span>
+                            <span class="progress-label">Рукопись «Изумрудик»</span>
+                            <span class="progress-percentage">100%</span>
                         </div>
                         <div class="progress-track">
-                            <div class="progress-fill" style="width: 75%;">
+                            <div class="progress-fill" style="width: 100%;">
                                 <div class="progress-glow"></div>
                             </div>
                         </div>
-                        <p class="progress-status">✦ Идет работа над финальными главами ✦</p>
+                        <p class="progress-status">✦ Ждет своего издателя ✦</p>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <div class="card-frame">
+                        <span class="card-star">✦</span>
+                        <img src="emerald-book.jpg" alt="Изумрудник" class="book-cover">
+                    </div>
+
+                    <div class="progress-section">
+                        <div class="progress-info">
+                            <span class="progress-label">Рукопись «Изумрудник»</span>
+                            <span class="progress-percentage">100%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 100%;">
+                                <div class="progress-glow"></div>
+                            </div>
+                        </div>
+                        <p class="progress-status">✦ Ждет своего издателя ✦</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<section class="gallery-sync">
-    <div class="sync-grid">
+    <section class="gallery-sync">
+        <div class="section-title-wrapper">
+                <h2 class="works-title">Художественные работы</h2>
+                <span class="title-decor">✦ ⚜ ✦</span>
+            </div>
+        <div class="sync-grid">
 
-        <div class="fantasy-card">
-            <div class="star-sparkle top-left">✦</div>
-            <div class="star-sparkle top-right">✦</div>
-            <div class="star-sparkle bottom-left">✦</div>
-            <div class="star-sparkle bottom-right">✦</div>
+            <div class="fantasy-card">
+                <div class="star-sparkle top-left">✦</div>
+                <div class="star-sparkle top-right">✦</div>
+                <div class="star-sparkle bottom-left">✦</div>
+                <div class="star-sparkle bottom-right">✦</div>
 
-            <div class="card-inner">
-                <div class="art-shrine">
-                    <img src="image/photo_2025-10-19_01-45-42.jpg" alt="Artwork">
-                    <div class="shrine-light"></div>
-                    <div class="fireflies">
-                        <div class="fly"></div><div class="fly"></div><div class="fly"></div><div class="fly"></div><div class="fly"></div>
+                <div class="card-inner">
+                    <div class="art-shrine">
+                        <img src="image/photo_2025-10-19_01-45-42.jpg" alt="Artwork">
+                        <div class="shrine-light"></div>
+                        <div class="fireflies">
+                            <div class="fly"></div>
+                            <div class="fly"></div>
+                            <div class="fly"></div>
+                            <div class="fly"></div>
+                            <div class="fly"></div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="magic-title">Название Манускрипта</h3>
+                        <div class="magic-divider"></div>
+                        <p>Здесь описание, написанное словно на старом пергаменте...</p>
                     </div>
                 </div>
-                <div class="card-content">
-                    <h3 class="magic-title">Название Манускрипта</h3>
-                    <div class="magic-divider"></div>
-                    <p>Здесь описание, написанное словно на старом пергаменте...</p>
-                </div>
             </div>
-        </div>
 
-        <div class="fantasy-card">
-            <div class="star-sparkle top-left">✦</div>
-            <div class="star-sparkle top-right">✦</div>
-            <div class="star-sparkle bottom-left">✦</div>
-            <div class="star-sparkle bottom-right">✦</div>
+            <div class="fantasy-card">
+                <div class="star-sparkle top-left">✦</div>
+                <div class="star-sparkle top-right">✦</div>
+                <div class="star-sparkle bottom-left">✦</div>
+                <div class="star-sparkle bottom-right">✦</div>
 
-            <div class="card-inner">
-                <div class="art-shrine">
-                    <img src="image/image.png" alt="Artwork">
-                    <div class="shrine-light"></div>
-                    <div class="fireflies">
-                        <div class="fly"></div><div class="fly"></div><div class="fly"></div><div class="fly"></div><div class="fly"></div>
+                <div class="card-inner">
+                    <div class="art-shrine">
+                        <img src="image/image.png" alt="Artwork">
+                        <div class="shrine-light"></div>
+                        <div class="fireflies">
+                            <div class="fly"></div>
+                            <div class="fly"></div>
+                            <div class="fly"></div>
+                            <div class="fly"></div>
+                            <div class="fly"></div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="magic-title">Еще один герой</h3>
+                        <div class="magic-divider"></div>
+                        <p>Вы уже могли ни раз видеть его прекрасный лик в этом тгк, но рассказывала я о нем совсем
+                            немного... Первый персонаж для знакомства — Сильвер, собственной персоной.</p>
                     </div>
                 </div>
-                <div class="card-content">
-                    <h3 class="magic-title">Еще один герой</h3>
-                    <div class="magic-divider"></div>
-                    <p>Вы уже могли ни раз видеть его прекрасный лик в этом тгк, но рассказывала я о нем совсем немного... Первый персонаж для знакомства — Сильвер, собственной персоной.</p>
-                </div>
             </div>
-        </div>
-        <div class="fantasy-card">
-            <div class="star-sparkle top-left">✦</div>
-            <div class="star-sparkle top-right">✦</div>
-            <div class="star-sparkle bottom-left">✦</div>
-            <div class="star-sparkle bottom-right">✦</div>
+            <div class="fantasy-card">
+                <div class="star-sparkle top-left">✦</div>
+                <div class="star-sparkle top-right">✦</div>
+                <div class="star-sparkle bottom-left">✦</div>
+                <div class="star-sparkle bottom-right">✦</div>
 
-            <div class="card-inner">
-                <div class="art-shrine">
-                    <img src="image/DM.png" alt="Artwork">
-                    <div class="shrine-light"></div>
-                    <div class="fireflies">
-                        <div class="fly"></div><div class="fly"></div><div class="fly"></div><div class="fly"></div><div class="fly"></div>
+                <div class="card-inner">
+                    <div class="art-shrine">
+                        <img src="image/DM.png" alt="Artwork">
+                        <div class="shrine-light"></div>
+                        <div class="fireflies">
+                            <div class="fly"></div>
+                            <div class="fly"></div>
+                            <div class="fly"></div>
+                            <div class="fly"></div>
+                            <div class="fly"></div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="magic-title">Подожди меня ещё немного</h3>
+                        <div class="magic-divider"></div>
+                        <p>один из моих рассказов, доступных для зефирчиков моего телеграм-канала</p>
                     </div>
                 </div>
-                <div class="card-content">
-                    <h3 class="magic-title">Подожди меня ещё немного</h3>
-                    <div class="magic-divider"></div>
-                    <p>один из моих рассказов, доступных для зефирчиков моего телеграм-канала</p>
-                </div>
             </div>
+
+
         </div>
-
-
-    </div>
-</section>
+    </section>
 
     <section class="collab-form">
         <div class="collab-container">
@@ -271,13 +329,7 @@
                 }, 600);
             }
 
-            // Слушаем клавиатуру (G или П)
-            document.addEventListener('keydown', (e) => {
-                if (e.key.toLowerCase() === 'g' || e.key.toLowerCase() === 'п') {
-                    doFlashAndGo();
-                }
-            });
-
+         
             // Функция обработки нажатия
             function handleAction(e) {
                 clicks++;
@@ -341,6 +393,167 @@
         if (progressSection) {
             observer.observe(progressSection);
         }
+        (function() {
+    const cursor = document.getElementById('magic-cursor');
+    const bio = document.querySelector('.main-bio');
+    
+    // Массив рун для эффекта
+    const runes = ["ᛖ", "ᚦ", "ᚱ", "ᚠ", "ᛗ", "ᛉ", "ᛊ", "ᛏ"];
+
+    // 1. ДВИЖЕНИЕ КУРСОРА И ШЛЕЙФ
+    document.addEventListener('mousemove', (e) => {
+        // Двигаем кольцо
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+
+        // Создаем искру шлейфа (только иногда, чтобы не лагало)
+        if (Math.random() > 0.7) {
+            createSpark(e.clientX, e.clientY);
+        }
+    });
+
+    function createSpark(x, y) {
+        const spark = document.createElement('div');
+        spark.className = 'spark-trail';
+        document.body.appendChild(spark);
+
+        const size = Math.random() * 4 + 2;
+        spark.setAttribute('style', `
+            position: fixed;
+            left: ${x}px;
+            top: ${y}px;
+            width: ${size}px;
+            height: ${size}px;
+            background: #d4af37;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99998;
+            filter: blur(1px);
+            box-shadow: 0 0 5px #d4af37;
+        `);
+
+        // Анимация разлета и исчезновения
+        const anim = spark.animate([
+            { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+            { transform: `translate(${(Math.random()-0.5)*40}px, ${Math.random()*40}px) scale(0)`, opacity: 0 }
+        ], { duration: 1000, easing: 'ease-out' });
+
+        anim.onfinish = () => spark.remove();
+    }
+
+    // 2. ЭФФЕКТ РУН ПРИ ВЫДЕЛЕНИИ
+    if (bio) {
+        bio.addEventListener('mouseup', (e) => {
+            const selection = window.getSelection().toString();
+            if (selection.length > 5) {
+                showRunes(e.pageX, e.pageY);
+            }
+        });
+    }
+
+    function showRunes(x, y) {
+        const runeWrap = document.createElement('div');
+        runeWrap.className = 'rune-hint';
+        runeWrap.style.left = x + 'px';
+        runeWrap.style.top = (y - 40) + 'px';
+        runeWrap.style.opacity = '1';
+        runeWrap.innerText = runes[Math.floor(Math.random() * runes.length)];
+        
+        document.body.appendChild(runeWrap);
+
+        setTimeout(() => {
+            runeWrap.style.opacity = '0';
+            setTimeout(() => runeWrap.remove(), 500);
+        }, 2000);
+    }
+})();
+(function() {
+    // Список магических символов (можно добавить свои)
+    const magicSymbols = ["ᛖ", "ᚦ", "ᚱ", "ᚠ", "ᛗ", "ᛉ", "ᛊ", "ᛏ", "ᛚ", "Delta", "ᚷ", "☾", "★", "⚜"];
+
+    document.addEventListener('mouseup', function(e) {
+        const selection = window.getSelection();
+        const selectedText = selection.toString().trim();
+
+        // Если выделено больше 2-х символов
+        if (selectedText.length > 2) {
+            // Создаем 3-5 рун веером
+            for (let i = 0; i < 4; i++) {
+                spawnRune(e.pageX, e.pageY);
+            }
+        }
+    });
+
+    function spawnRune(x, y) {
+        const rune = document.createElement('div');
+        rune.className = 'floating-rune';
+        
+        // Случайный символ из списка
+        rune.innerText = magicSymbols[Math.floor(Math.random() * magicSymbols.length)];
+        
+        document.body.appendChild(rune);
+
+        // Случайный разлет в стороны
+        const destX = (Math.random() - 0.5) * 100;
+        const destY = -Math.random() * 100 - 50;
+        const rotation = (Math.random() - 0.5) * 90;
+
+        rune.style.left = x + 'px';
+        rune.style.top = y + 'px';
+
+        // Анимация через JS Web Animations API
+        rune.animate([
+            { 
+                opacity: 0, 
+                transform: 'translate(0, 0) rotate(0deg) scale(0.5)',
+                filter: 'blur(5px)'
+            },
+            { 
+                opacity: 1, 
+                offset: 0.2,
+                filter: 'blur(0px)'
+            },
+            { 
+                opacity: 0, 
+                transform: `translate(${destX}px, ${destY}px) rotate(${rotation}deg) scale(1.5)`,
+                filter: 'blur(2px)'
+            }
+        ], {
+            duration: 1500 + Math.random() * 1000,
+            easing: 'ease-out'
+        }).onfinish = () => rune.remove();
+    }
+})();
+function setLanguage(lang) {
+    document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[lang][key]) {
+            element.innerText = translations[lang][key];
+        }
+    });
+
+    // Сохраняем выбор в браузере
+    localStorage.setItem('preferred_lang', lang);
+    
+    // Подсвечиваем активную кнопку
+    document.querySelectorAll('.lang-item').forEach(btn => {
+        btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
+    });
+}
+
+// Слушатель событий на кнопки в шапке
+document.querySelectorAll('.lang-item').forEach(button => {
+    button.addEventListener('click', () => {
+        const lang = button.innerText.toLowerCase(); // 'ru' или 'en'
+        setLanguage(lang);
+    });
+});
+
+// Проверка при загрузке страницы
+window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferred_lang') || 'ru';
+    setLanguage(savedLang);
+});
     </script>
 
 </body>
