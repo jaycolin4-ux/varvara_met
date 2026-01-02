@@ -596,7 +596,7 @@ body, a, button, input, textarea {
     .form-bottom { flex-direction: column; gap: 20px; }
     .profile-photo { width: 250px; }
 }
-
+.hero-content h1 { font-family: 'Cinzel', serif; font-size: clamp(3rem, 8vw, 6rem); letter-spacing: 15px; margin: 20px 0; }
 /* --- ГАЛЕРЕЯ --- */
 .gallery-row {
     display: flex;
@@ -1427,6 +1427,7 @@ body {
 .fly:nth-child(3) { left: 60%; bottom: 5%; animation: fly-logic 6s infinite linear; animation-delay: 2s; }
 .fly:nth-child(4) { left: 80%; bottom: 15%; animation: fly-logic 10s infinite linear; animation-delay: 0.5s; }
 .fly:nth-child(5) { left: 30%; bottom: 5%; animation: fly-logic 8s infinite linear; animation-delay: 3s; }
+
 
 
 
