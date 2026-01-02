@@ -158,12 +158,7 @@ body, a, button, input, textarea {
     color: #fff9e6;
     letter-spacing: 15px;
     margin: 0;
-    text-shadow: 
-        0 0 10px rgba(212, 175, 55, 0.8),
-        0 0 20px rgba(212, 175, 55, 0.5),
-        0 0 40px rgba(184, 134, 11, 0.3),
-        0 5px 10px rgba(0, 0, 0, 0.5);
-    animation: goldPulse 4s ease-in-out infinite;
+   
 }
 /*
 @keyframes goldPulse {
@@ -184,7 +179,7 @@ body, a, button, input, textarea {
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 1.1rem;
-    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+ 
 }
 
 #fogCanvas {
@@ -1427,3 +1422,4 @@ body {
 .fly:nth-child(3) { left: 60%; bottom: 5%; animation: fly-logic 6s infinite linear; animation-delay: 2s; }
 .fly:nth-child(4) { left: 80%; bottom: 15%; animation: fly-logic 10s infinite linear; animation-delay: 0.5s; }
 .fly:nth-child(5) { left: 30%; bottom: 5%; animation: fly-logic 8s infinite linear; animation-delay: 3s; }
+
