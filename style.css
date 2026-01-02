@@ -133,7 +133,7 @@ body, a, button, input, textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #122620; /* Тот самый глубокий зеленый */
+    background: rgba(11, 30, 34, 0.8);
     overflow: hidden;
 }
 
@@ -1427,6 +1427,7 @@ body {
 .fly:nth-child(3) { left: 60%; bottom: 5%; animation: fly-logic 6s infinite linear; animation-delay: 2s; }
 .fly:nth-child(4) { left: 80%; bottom: 15%; animation: fly-logic 10s infinite linear; animation-delay: 0.5s; }
 .fly:nth-child(5) { left: 30%; bottom: 5%; animation: fly-logic 8s infinite linear; animation-delay: 3s; }
+
 
 
 
