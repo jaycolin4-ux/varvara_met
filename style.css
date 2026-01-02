@@ -406,7 +406,6 @@ body, a, button, input, textarea {
     
     /* Твои старые свойства для обрезки */
     display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -418,15 +417,13 @@ body, a, button, input, textarea {
     text-decoration: underline; /* Подчеркивание для интуитивности */
 }
 
-/* Опционально: можно заставить текст расширяться при наведении (аккуратно) */
-/* Если хочешь, чтобы он разворачивался прямо в карточке, раскомментируй это: */
-/*
+
 .work-card:hover .progress-label {
     -webkit-line-clamp: unset; 
     display: block;
     overflow: visible;
 }
-*/
+
 
 .progress-percentage {
     font-family: 'Cinzel', serif;
