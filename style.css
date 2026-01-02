@@ -142,15 +142,7 @@ body, a, button, input, textarea {
     display: none !important;
 }
 
-.hero-content h1 {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(2.5rem, 10vw, 6rem);
-    color: #fff9e6; 
-    letter-spacing: 15px;
-    margin: 0;
-    text-shadow: none; /* Свечение убрано по твоей просьбе */
-    animation: none; 
-}
+
 
 .hero-content h1 {
     font-family: 'Cinzel', serif;
@@ -1422,4 +1414,5 @@ body {
 .fly:nth-child(3) { left: 60%; bottom: 5%; animation: fly-logic 6s infinite linear; animation-delay: 2s; }
 .fly:nth-child(4) { left: 80%; bottom: 15%; animation: fly-logic 10s infinite linear; animation-delay: 0.5s; }
 .fly:nth-child(5) { left: 30%; bottom: 5%; animation: fly-logic 8s infinite linear; animation-delay: 3s; }
+
 
